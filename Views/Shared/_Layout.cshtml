@@ -1,0 +1,90 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - ClubFlow</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/styles.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/ClubFlow.styles.css" asp-append-version="true" />
+</head>
+<body>
+    <header>
+        <section class="default_navigation navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3" id="default_Navigation">
+            <nav>
+                <ul class="navbar-nav flex-grow-1">
+                    <li class="navitem">
+                        <a asp-area="" asp-controller="Home" asp-action="Dashboard">
+                            <figure>
+                                <img src="images/icons/home_ico.png" alt="" width="50" height="50">
+                                <figcaption>Dashboard</figcaption>
+                            </figure>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </section>
+        <section class="user_navigation navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3" id="user_navigation">
+            <nav>
+                <ul class="navbar-nav flex-grow-1">
+                    <li class="navitem">
+                        <a asp-area="" asp-controller="Home" asp-action="News">
+                            <figure>
+                                <img href="/images/icons/news_ico.png" alt="" width="50" height="50"> 
+                                <figcaption>Neuigkeiten</figcaption>
+                            </figure>
+                        </a>
+                    </li>
+                    <li class="navitem">
+                        <a asp-area="" asp-controller="Home" asp-action="Messages">
+                            <figure>
+                                <img href="/images/icons/msg_ico.png" alt="" width="50" height="50"> 
+                                <figcaption>Nachrichten</figcaption>
+                            </figure>
+                        </a>
+                    </li>
+                    <li class="navitem">
+                        <a asp-area="" asp-controller="Home" asp-action="Dates">
+                            <figure>
+                                <img href="/images/icons/date_ico.png" alt="" width="50" height="50"> 
+                                <figcaption>Termine</figcaption>
+                            </figure>
+                        </a>
+                    </li>
+                    <li class="navitem"
+                        ><a asp-area="" asp-controller="Home" asp-action="Profile">
+                            <figure>
+                                <img href="/images/icons/prf_ico.png" alt="" width="50" height="50"> 
+                                <figcaption>Benuterprofil</figcaption>
+                            </figure>
+                         </a>
+                     </li>
+                    <li class="navitem">
+                        <a asp-area="" asp-controller="Home" asp-action="Products">
+                            <figure>
+                                <img href="/images/icons/prd_ico.png" alt="" width="50" height="50"> 
+                                <figcaption>Produkte</figcaption>
+                            </figure>
+                         </a>
+                    </li>
+                </ul>
+            </nav>
+        </section>
+    </header>
+    <div class="container">
+        <main role="main" class="pb-3">
+            @RenderBody()
+        </main>
+    </div>
+
+    <footer class="border-top footer text-muted">
+        <div class="container">
+            &copy; 2025 - ClubFlow - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+        </div>
+    </footer>
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>

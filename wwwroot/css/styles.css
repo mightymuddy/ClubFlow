@@ -1,0 +1,125 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    width:100%;
+    height: auto;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    background-color: #2e313b;
+}
+
+header{
+    width: inherit;
+    display: inline-flex;
+    justify-content: space-around;
+    background-color: #5771d8;
+}
+
+main{
+    width: inherit;
+    display: flex;
+    background-color:#383c47;
+}
+
+footer {
+    width: inherit;
+    text-align: center;
+    background-color: #5771d8;
+}
+
+a{
+    display: block;
+    padding: 8px;
+    text-decoration: none;
+    color:black;
+}
+
+a:active{
+    color:orangered;
+}
+
+a:visited{
+    color:black;
+}
+
+a:hover {
+    color: orangered;
+}
+
+
+.default_navigation {
+    display: flex;
+    width:  inherit;
+    justify-content: flex-start;
+    flex-direction: row;
+}
+
+.user_navigation {
+    display: flex;
+    width: inherit;
+    justify-content: flex-end;
+    flex-direction: row;
+}
+
+.navitem {
+    float: left;
+    list-style-type: none;
+}
+
+.navitem a {
+    display: flex;
+    text-align: center;
+    padding: 14px 16px;
+}
+
+.navitem a figure{
+    text-align: center;
+}
+
+.functionmenu {
+    display: flex;
+    width: 10%;
+    justify-content: center;
+    background-color: #5771d8;
+}
+
+.menu {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.menu .menuitem{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+
+.menuitem > a{
+    display: block;
+}
+
+.news_feed{
+    width: 70%;
+    background-color: #383c47;
+    color: lightgray;
+    border: 5px solid #383c47;
+}
+
+.feed_search, .feed{
+    width: 100%;
+    padding: 0.2em;
+    margin: 0.2em;
+}
+
+.advertisment{
+    width: 20%;
+    padding: 1em;
+    margin: 1em;
+    justify-content: normal;
+    color: lightgray;
+    border: 3px solid orangered;
+}
