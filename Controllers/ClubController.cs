@@ -5,6 +5,7 @@ using Vereinsportal.Components;
 namespace Vereinsportal.Interfaces
 
 {
+    //This Controller is made for all functionallities depending on the clubs
     [Route("api/[controller]")]
     [ApiController]
     public class ClubController : ControllerBase
