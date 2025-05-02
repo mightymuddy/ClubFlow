@@ -24,6 +24,11 @@ namespace ClubFlow.Controllers
             return View();
         }
 
+        public IActionResult CreateEditClub()
+        {
+            return View();
+        }
+
         public IActionResult Account()
         {
             return View();

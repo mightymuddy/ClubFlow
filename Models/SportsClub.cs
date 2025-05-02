@@ -1,10 +1,8 @@
-﻿using ClubFlow.Models;
-using System.Runtime.CompilerServices;
-using static ClubFlow.Models.Club;
+﻿using Vereinsportal.Interfaces;
 
-namespace Vereinsportal.Interfaces
+namespace ClubFlow.Models
 {
-    public interface IClub
+    public class SportsClub : IClub
     {
         public int ClubId { get; set; }
         public string Name { get; set; }
@@ -13,10 +11,8 @@ namespace Vereinsportal.Interfaces
         public DateTime BirthDay { get; set; }
         public DateTime EntryDate { get; set; }
         public string Email { get; set; }
-        public string Phone {  get; set; }
+        public string Phone { get; set; }
         public string Mobile { get; set; }
-        public Type getType { get { 
-                return GetType();
-            } }
+
     }
 }

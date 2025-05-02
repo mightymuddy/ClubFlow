@@ -2,10 +2,11 @@
 using System.Runtime.InteropServices;
 using Vereinsportal.Interfaces;
 
-namespace Vereinsportal.Components
+namespace ClubFlow.Components
 {
     public class Location : ILocation
     {
+        public int LocationId { get; set; }
         private string _city;
         private EN_Country _country;
         private string _region;

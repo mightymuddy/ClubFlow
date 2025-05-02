@@ -1,6 +1,6 @@
-﻿using Microsoft.AspNetCore.Http;
+﻿using ClubFlow.Models;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
-using Vereinsportal.Components;
 
 namespace Vereinsportal.Interfaces
 

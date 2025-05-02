@@ -1,9 +1,11 @@
-﻿using Microsoft.Build.Framework;
+﻿using ClubFlow.Interfaces;
+using Microsoft.Build.Framework;
 
-namespace ClubFlow.Interfaces
+namespace ClubFlow.Models
 {
-    public interface IUser
+    public class User : IUser
     {
+
         //[Key]
         public int Id { get; set; }
         [Required]
@@ -11,7 +13,7 @@ namespace ClubFlow.Interfaces
         [Required]
         public string LastName { get; set; }
         [Required]
-        public string UserName { get; set; }
+        public string UserName {  get; set; }
         [Required]
         public string Password { get; set; }
         [Required]
@@ -22,5 +24,12 @@ namespace ClubFlow.Interfaces
         public bool EmailConfirmed { get; set; }
         [Required]
         public bool Authorized { get; set; }
+
+        public User()
+        {
+         
+        }
+
+
     }
 }
