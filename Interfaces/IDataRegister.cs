@@ -1,6 +1,6 @@
 ﻿using System.Collections.ObjectModel;
 
-namespace Vereinsportal.Components
+namespace ClubFlow.Interfaces
 {
     public interface IDataRegister
     {

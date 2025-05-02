@@ -1,3 +1,6 @@
+using ClubFlow.Data;
+using Microsoft.EntityFrameworkCore;
+
 namespace ClubFlow
 {
     public class Program
@@ -8,6 +11,8 @@ namespace ClubFlow
 
             // Add services to the container.
             builder.Services.AddControllersWithViews();
+            builder.Services.AddDbContext<ClubFlowDBContext>(
+                options => options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
 
             var app = builder.Build();
 

@@ -2,8 +2,9 @@
 using System.Collections.Generic;
 using Vereinsportal.Interfaces;
 using System.Collections.ObjectModel;
+using ClubFlow.Components;
 
-namespace Vereinsportal.Components
+namespace ClubFlow.Models
 {
     public static class UserClub
     {
@@ -18,8 +19,8 @@ namespace Vereinsportal.Components
                 default: club = new Club(); break;
             }
 
-            club.setName(Name)
-                    .setAddress(location);
+            club.Name = Name;
+            club.LocationId = location.LocationId;
             addClub(club);
         }
 
@@ -30,7 +31,7 @@ namespace Vereinsportal.Components
             int i = 0;
             while (i < clubs.Count)
             {
-                if (clubs[i].getName() == name)
+                if (clubs[i].Name == name)
                     i++;
             }
             return clubs[i];
