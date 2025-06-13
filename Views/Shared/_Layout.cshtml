@@ -10,21 +10,51 @@
 </head>
 <body>
     <header>
+        <section class="side_navigation navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-right box-shadow mb-3" id="side_Navigation">
+            <nav>
+                <ul class="navbar-nav flex-grow-0">
+                    <li class="navitem">
+                        <a asp-area="" asp-controller="" asp-action="">
+                            <figure>
+                                <img src="#" alt="Alternate Text" width="20" height="20"/>
+                                <figcaption></figcaption>
+                            </figure>
+                        </a>
+                    </li>
+                    <li class="navitem">
+                        <a asp-area="" asp-controller="" asp-action=""></a>
+                    </li>
+                    <li class="navitem">
+                        <a asp-area="" asp-controller="" asp-action=""></a>
+                    </li>
+                </ul>
+            </nav>
+        </section>
         <section class="default_navigation navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3" id="default_Navigation">
             <nav>
                 <ul class="navbar-nav flex-grow-1">
                     <li class="navitem">
-                        <a asp-area="" asp-controller="Home" asp-action="Dashboard">
+                        <a asp-area="" asp-controller="Home" asp-action="Index">
                             <figure>
                                 <img src="images/icons/home_ico.png" alt="" width="50" height="50">
-                                <figcaption>Dashboard</figcaption>
+                                <figcaption>Home</figcaption>
+                            </figure>
+                        </a>
+                    </li>
+                </ul>
+                <ul class="navbar-nav flex-grow-1">
+                    <li class="navitem">
+                        <a asp-area="" asp-controller="Home" asp-action="Categories">
+                            <figure>
+                                <img src="images/icons/home_ico.png" alt="" width="50" height="50">
+                                <figcaption>Home</figcaption>
                             </figure>
                         </a>
                     </li>
                 </ul>
             </nav>
         </section>
-        <section class="user_navigation navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3" id="user_navigation">
+        <section class="user_navigation navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3" id="user_navigation">        
             <nav>
                 <ul class="navbar-nav flex-grow-1">
                     <li class="navitem">
