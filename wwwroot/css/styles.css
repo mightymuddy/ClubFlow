@@ -4,46 +4,47 @@
     box-sizing: border-box;
 }
 
-body{
-    width:100%;
+body {
+    width: 100%;
     height: auto;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    background-color: #2e313b;
+    background-color: hsl(246, 10%, 89%);
+    ;
 }
 
-header{
+header {
     width: inherit;
-    display: inline-flex;
-    justify-content: space-around;
-    background-color: #5771d8;
+    color: white;
+    background-color: hsl(246, 86%, 23%);
 }
 
 main{
     width: inherit;
     display: flex;
-    background-color:#383c47;
+    background-color:hsl(246, 10%, 89%);
 }
 
 footer {
     width: inherit;
     text-align: center;
-    background-color: #5771d8;
+    background-color: hsl(246, 86%, 23%);
+    position: fixed;
 }
 
-a{
+a {
     display: block;
     padding: 8px;
     text-decoration: none;
-    color:black;
+    color: hsl(246, 10%, 89%);
 }
 
 a:active{
     color:orangered;
 }
 
-a:visited{
-    color:black;
-}
+    a:visited {
+        color: hsl(246, 10%, 89%);
+    }
 
 a:hover {
     color: orangered;
@@ -83,7 +84,7 @@ a:hover {
     display: flex;
     width: 10%;
     justify-content: center;
-    background-color: #5771d8;
+    background-color: hsl(246, 10%, 89%);;
 }
 
 .menu {
@@ -105,7 +106,7 @@ a:hover {
 .news_feed{
     width: 70%;
     background-color: #383c47;
-    color: lightgray;
+    color: white;
     border: 5px solid #383c47;
 }
 
@@ -115,11 +116,76 @@ a:hover {
     margin: 0.2em;
 }
 
-.advertisment{
+.advertisment {
     width: 20%;
     padding: 1em;
     margin: 1em;
     justify-content: normal;
-    color: lightgray;
+    color: white;
     border: 3px solid orangered;
+    background-color: hsl(246, 86%, 23%);
+}
+
+.navbar-nav{
+    flex-direction: row;
+}
+
+.nav-item {
+    margin: 0 0.5em;
+    padding: 0 0.5em;
+}
+
+.sidebanner {
+    max-width: 200px;
+    min-width: 25px;
+    width: 20%;
+    min-height: 200px;
+    background-color: hsl(246, 86%, 23%);
+    color: hsl(246, 20%, 90%);
+    padding: 0.2em 0.4em;
+    position: fixed;
+}
+
+.toggle_sidebanner {
+    max-width: 25px;
+    min-width: 25px;
+    max-height: 25px;
+    min-width: 25px;
+    width: 20em;
+    height: 20em;
+    float: right;
+    padding: 0;
+    background-color: hsl(246, 86%, 23%);
+    color: hsl(246, 20%, 90%);
+}
+
+.firstRegion {
+    margin-top: 1.5em;
+}
+
+.data {
+    visibility: hidden;
+}
+
+    .data.in {
+        visibility: visible;
+    }
+
+#demo {
+    width: 50px;
+}
+
+
+    #demo.in {
+        width: 220px;
+    }
+
+#demo {
+    display: inline-block;
+    border: none;
+    overflow: hidden;
+    white-space: nowrap;
+    vertical-align: middle;
+    line-height: 30px;
+    height: 30px;
 }

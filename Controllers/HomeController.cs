@@ -18,6 +18,11 @@ namespace ClubFlow.Controllers
             return View();
         }
 
+        public IActionResult LoginRegister()
+        {
+            return View();
+        }
+
         public IActionResult Dashboard()
         {
             return View();
