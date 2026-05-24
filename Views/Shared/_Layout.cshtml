@@ -6,50 +6,53 @@
     <title>@ViewData["Title"] - ClubFlow</title>
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
     <link rel="stylesheet" href="~/css/styles.css" asp-append-version="true" />
-    <link rel="stylesheet" href="~/ClubFlow.styles.css" asp-append-version="true" />
+    
 </head>
 <body>
-    <header class="container-fluid justify-content-center">
+    <header class="container-fluid justify-content-center box-neonlight-color">
        
         <div class="row">
-            <div class="col-sm-3">
-                <figure>
-                    <img src="~/img/ClubFLowLogo.png" alt="" width="50%" height="50%" />       
-                </figure>
-            </div>
-            <div class="col-sm-6 text-center">
-                <form asp-action="Index" asp-controller="Home" asp-area="">
-                    <input type="text" name="query" placeholder="suche" />
-                    <input type="submit" name="search" value="Suchen" />
-                </form>
-            </div>
-            <div class="col-sm-3">
-                <nav>
-                    <ul class="nav navbar-nav">
-                        <li class="nav-item active"><a asp-action="Index" asp-controller="Home" asp-area="">Home</a></li>
-                        <li class="nav-item"><a asp-action="Browse" asp-controller="Home" asp-area="">Browse</a></li>
-                        <li class="nav-item"><a asp-action="LoginRegister" asp-controller="Home" asp-area="">Login/Register</a></li>
-                    </ul>
-                </nav>
-            </div>
+            <div class="header_navigation_alignment">
+        <div class="col-sm-3 logo-position centering">
+            <figure class="m-0">
+                <img src="~/img/ClubFLowLogo.png" alt="" width="40%" height="40%" />       
+            </figure>
         </div>
-        <div class="row sidebanner vh-100" id="demo">
-            <button type="button" class="btn btn-primary btn-sm toggle_sidebanner"
-                    data-toggle="toggle" data-target="#demo">
-                +
-            </button>
-            <div class="firstRegion data">Your region</div>
-            <div class="data"></div>
-            <div class="data"></div>
+                <div class="col-sm-6 text-center centering">
+            <form asp-action="Index" asp-controller="Home" asp-area="">
+                <input type="text" name="query" placeholder="suche" />
+                <input type="submit" name="search" value="Suchen" />
+            </form>
         </div>
+                <div class="col-sm-3 centering">
+            <nav>
+                <ul class="nav navbar-nav ">
+                    <li class="nav-item active"><a asp-action="Index" asp-controller="Home" asp-area="">Home</a></li>
+                    <li class="nav-item"><a asp-action="Browse" asp-controller="Home" asp-area="">Browse</a></li>
+                    <li class="nav-item"><a asp-action="LoginRegister" asp-controller="Home" asp-area="">Login/Register</a></li>
+                </ul>
+            </nav>
+        </div>
+        </div>
+    </div>
+    <div class="row sidebanner box-neonlight-color vh-100" id="demo">
+        <button type="button" class="btn btn-primary btn-sm toggle_sidebanner"
+                data-toggle="toggle" data-target="#demo">
+            +
+        </button>
+        <div class="firstRegion data">Your region</div>
+        <div class="data"></div>
+        <div class="data"></div>
+    </div>
+        
     </header>
     <div class="container">
-        <main role="main" class="pb-3">
+        <main role="main" class="container box-neonlight-color pb-3">
             @RenderBody()
         </main>
     </div>
 
-    <footer class="border-top footer text-muted">
+    <footer class="footer text-muted box-neonlight-color">
         <div class="container">
             &copy; 2025 - ClubFlow - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
         </div>
