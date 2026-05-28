@@ -1,20 +1,16 @@
-using ClubFlow.Interfaces;
-using ClubFlow.Models;
-using ClubFlow.ViewModels;
-using Microsoft.AspNetCore.Mvc;
 using System.Diagnostics;
+using ClubFlow.Models;
+using Microsoft.AspNetCore.Mvc;
 
 namespace ClubFlow.Controllers
 {
     public class HomeController : Controller
     {
         private readonly ILogger<HomeController> _logger;
-        private readonly IUserRepository _userRepository;
 
-        public HomeController(ILogger<HomeController> logger, IUserRepository userRepository)
+        public HomeController(ILogger<HomeController> logger)
         {
             _logger = logger;
-            _userRepository = userRepository;
         }
 
         public IActionResult Index()
@@ -22,41 +18,9 @@ namespace ClubFlow.Controllers
             return View();
         }
 
-        [HttpGet]
         public IActionResult LoginRegister()
         {
-            return View(new LoginRegisterViewModel());
-        }
-
-        [HttpPost]
-        [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Register(LoginRegisterViewModel model, (object success, object errorMessage) value)
-        {
-            if (!ModelState.IsValid)
-            {
-                return View("LoginRegister", model);
-            }
-
-            var (success, errorMessage) = await _userRepository.RegisterUserAsync(model.registerLoginModel, model.user);
-            if (!success)
-            {
-                ModelState.AddModelError(string.Empty, errorMessage);
-                return View("LoginRegister", model);
-            }
-
-            return RedirectToAction("Index");
-        }
-
-        [HttpPost]
-        [ValidateAntiForgeryToken]
-        public IActionResult Login(LoginRegisterViewModel model)
-        {
-            if(!ModelState.IsValid)
-            {
-                return View("LoginRegister", model);
-            }
-
-            return RedirectToAction("Index");
+            return View();
         }
 
         public IActionResult Dashboard()

@@ -1,7 +1,4 @@
 using ClubFlow.Data;
-using ClubFlow.Interfaces;
-using ClubFlow.Repository;
-using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 
 namespace ClubFlow
@@ -14,13 +11,8 @@ namespace ClubFlow
 
             // Add services to the container.
             builder.Services.AddControllersWithViews();
-
             builder.Services.AddDbContext<ClubFlowDBContext>(
                 options => options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
-
-           
-            builder.Services.AddScoped<IUserRepository, UserRepository>();
-            builder.Services.AddScoped<IPasswordHasher<ClubFlow.Models.User>, PasswordHasher<ClubFlow.Models.User>>();
 
             var app = builder.Build();
 
@@ -32,12 +24,10 @@ namespace ClubFlow
                 app.UseHsts();
             }
 
-
             app.UseHttpsRedirection();
             app.UseStaticFiles();
 
             app.UseRouting();
-
 
             app.UseAuthorization();
 
