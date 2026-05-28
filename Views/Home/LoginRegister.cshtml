@@ -1,0 +1,59 @@
+﻿@model ClubFlow.ViewModels.LoginRegisterViewModel
+
+<section class="container-fluid row">
+    <div class="loginPage">
+
+        <form class="login" method="post" asp-controller="Home" asp-action="Index">
+            <fieldset class="loginfield" id="loginfield">
+                <legend class="textposition-center">Login</legend>
+                <p class="textposition-center">
+                    <label asp-for="registerLoginModel.UserName">User Name</label>
+                    <input asp-for="registerLoginModel.UserName" />
+                </p>
+                <p class="textposition-center">
+                    <label asp-for="registerLoginModel.Password">Password</label>
+                    <input asp-for="registerLoginModel.Password" type="password" />
+                </p>
+                <p class="textposition-center">
+                    <input type="submit" value="Login" />
+                </p>
+            </fieldset>
+        </form>
+
+        <form class="login" method="post" asp-controller="Home" asp-action="Index">
+            <fieldset id="registerfield">
+                <legend>Registrierung</legend>
+                <p>
+                    <label class="m-1" asp-for="registerLoginModel.UserName" text="User Name">User Name</label>
+                    <input class="m-1" asp-for="registerLoginModel.UserName" placeholder="Username" />
+                </p>
+                <p>
+                    <label class="m-1" asp-for="user.FirstName" Value="Vorname">Vorname</label>
+                    <input class="m-1" asp-for="user.FirstName" placeholder="Vorname" />
+                </p>
+                <p>
+                    <label asp-for="user.LastName" Value="Nachname">Nachname</label>
+                    <input asp-for="user.LastName" placeholder="Nachname" />
+                <p>
+                    <label asp-for="registerLoginModel.Email" Value="Email">E-Mail</label>
+                    <input asp-for="registerLoginModel.Email" placeholder="Email" />
+                </p>
+                <p>
+                    <label asp-for="registerLoginModel.ConfirmEmail" Value="Email wdh.">E-Mail wiederholen</label>
+                    <input asp-for="registerLoginModel.ConfirmEmail" placeholder="Email wdh." />
+                </p>
+                <p>
+                    <label asp-for="registerLoginModel.Password" Value="Password">Password</label>
+                    <input asp-for="registerLoginModel.Password" placeholder="Password" />
+                </p>
+                <p>
+                    <label asp-for="registerLoginModel.ConfirmPassword" Value="Password wdh.">Password wiederholen</label>
+                    <input asp-for="registerLoginModel.ConfirmPassword" placeholder="Password wdh." />
+                </p>
+                <input type="submit" value="Registrieren" />
+            </fieldset>
+        </form>
+
+
+    
+</section>

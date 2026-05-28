@@ -6,78 +6,53 @@
     <title>@ViewData["Title"] - ClubFlow</title>
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
     <link rel="stylesheet" href="~/css/styles.css" asp-append-version="true" />
-    <link rel="stylesheet" href="~/ClubFlow.styles.css" asp-append-version="true" />
+    
 </head>
 <body>
-    <header>
-        <section class="default_navigation navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3" id="default_Navigation">
+    <header class="container-fluid justify-content-center box-neonlight-color">
+       
+        <div class="row">
+            <div class="header_navigation_alignment">
+        <div class="col-sm-3 logo-position centering">
+            <figure class="m-0">
+                <img src="~/img/ClubFLowLogo.png" alt="" width="40%" height="40%" />       
+            </figure>
+        </div>
+                <div class="col-sm-6 text-center centering">
+            <form asp-action="Index" asp-controller="Home" asp-area="">
+                <input type="text" name="query" placeholder="suche" />
+                <input type="submit" name="search" value="Suchen" />
+            </form>
+        </div>
+                <div class="col-sm-3 centering">
             <nav>
-                <ul class="navbar-nav flex-grow-1">
-                    <li class="navitem">
-                        <a asp-area="" asp-controller="Home" asp-action="Dashboard">
-                            <figure>
-                                <img src="images/icons/home_ico.png" alt="" width="50" height="50">
-                                <figcaption>Dashboard</figcaption>
-                            </figure>
-                        </a>
-                    </li>
+                <ul class="nav navbar-nav ">
+                    <li class="nav-item active"><a asp-action="Index" asp-controller="Home" asp-area="">Home</a></li>
+                    <li class="nav-item"><a asp-action="Browse" asp-controller="Home" asp-area="">Browse</a></li>
+                    <li class="nav-item"><a asp-action="LoginRegister" asp-controller="Home" asp-area="">Login/Register</a></li>
                 </ul>
             </nav>
-        </section>
-        <section class="user_navigation navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3" id="user_navigation">
-            <nav>
-                <ul class="navbar-nav flex-grow-1">
-                    <li class="navitem">
-                        <a asp-area="" asp-controller="Home" asp-action="News">
-                            <figure>
-                                <img href="/images/icons/news_ico.png" alt="" width="50" height="50"> 
-                                <figcaption>Neuigkeiten</figcaption>
-                            </figure>
-                        </a>
-                    </li>
-                    <li class="navitem">
-                        <a asp-area="" asp-controller="Home" asp-action="Messages">
-                            <figure>
-                                <img href="/images/icons/msg_ico.png" alt="" width="50" height="50"> 
-                                <figcaption>Nachrichten</figcaption>
-                            </figure>
-                        </a>
-                    </li>
-                    <li class="navitem">
-                        <a asp-area="" asp-controller="Home" asp-action="Dates">
-                            <figure>
-                                <img href="/images/icons/date_ico.png" alt="" width="50" height="50"> 
-                                <figcaption>Termine</figcaption>
-                            </figure>
-                        </a>
-                    </li>
-                    <li class="navitem"
-                        ><a asp-area="" asp-controller="Home" asp-action="Profile">
-                            <figure>
-                                <img href="/images/icons/prf_ico.png" alt="" width="50" height="50"> 
-                                <figcaption>Benuterprofil</figcaption>
-                            </figure>
-                         </a>
-                     </li>
-                    <li class="navitem">
-                        <a asp-area="" asp-controller="Home" asp-action="Products">
-                            <figure>
-                                <img href="/images/icons/prd_ico.png" alt="" width="50" height="50"> 
-                                <figcaption>Produkte</figcaption>
-                            </figure>
-                         </a>
-                    </li>
-                </ul>
-            </nav>
-        </section>
+        </div>
+        </div>
+    </div>
+    <div class="row sidebanner box-neonlight-color vh-100" id="demo">
+        <button type="button" class="btn btn-primary btn-sm toggle_sidebanner"
+                data-toggle="toggle" data-target="#demo">
+            +
+        </button>
+        <div class="firstRegion data">Your region</div>
+        <div class="data"></div>
+        <div class="data"></div>
+    </div>
+        
     </header>
     <div class="container">
-        <main role="main" class="pb-3">
+        <main role="main" class="container box-neonlight-color pb-3">
             @RenderBody()
         </main>
     </div>
 
-    <footer class="border-top footer text-muted">
+    <footer class="footer text-muted box-neonlight-color">
         <div class="container">
             &copy; 2025 - ClubFlow - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
         </div>
@@ -85,6 +60,7 @@
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
     <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
     <script src="~/js/site.js" asp-append-version="true"></script>
+    <script src="~/js/toggleOptionbanner.js"></script>
     @await RenderSectionAsync("Scripts", required: false)
 </body>
 </html>
