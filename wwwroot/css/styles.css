@@ -4,32 +4,45 @@
     box-sizing: border-box;
 }
 
+html{
+    height:100%;
+}
+
 body {
+    position: relative;
+    margin: 0;
+    box-sizing: content-box;
     width: 100%;
     height: auto;
+    min-height: 100%;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    background-color: hsl(246, 10%, 89%);
-    ;
+    background-color: rgba(36,36,36, .85);
+    overflow-y: scroll;
 }
 
 header {
     width: inherit;
+    margin: auto 0;
+    padding-top: 0.2em;
     color: white;
-    background-color: hsl(246, 86%, 23%);
 }
 
-main{
+main {
     width: inherit;
+    margin: 2em auto;
+    padding: 1em;
     display: flex;
-    background-color:hsl(246, 10%, 89%);
+    background-color: rgba(36,36,36, .85);
 }
 
 footer {
-    width: inherit;
     text-align: center;
-    background-color: hsl(246, 86%, 23%);
-    position: fixed;
+    margin 0, auto;
+    padding: 1em;
+    width: 100%;
+    white-space: nowrap;
 }
+
 
 a {
     display: block;
@@ -50,13 +63,39 @@ a:hover {
     color: orangered;
 }
 
-
-.default_navigation {
+.header_navigation_alignment {
     display: flex;
-    width:  inherit;
-    justify-content: flex-start;
-    flex-direction: row;
+    width: 100%;
+ 
 }
+
+    .header_navigation_alignment, .header_navigation_alignment div {
+        margin: 1em auto;
+        padding: 1em auto;
+        justify-content: space-between;
+        vertical-align: central;
+    }
+
+
+    .default_navigation {
+        display: flex;
+        width: inherit;
+        justify-content: flex-start;
+        flex-direction: row;
+    }
+
+    .logo-position{
+        vertical-align: central;
+        text-align: center;
+        margin:0;
+        padding: 0;
+        
+    }
+
+    .centering {
+        width:fit-content;
+        vertical-align:central;
+    }
 
 .user_navigation {
     display: flex;
@@ -110,10 +149,16 @@ a:hover {
     border: 5px solid #383c47;
 }
 
-.feed_search, .feed{
-    width: 100%;
-    padding: 0.2em;
-    margin: 0.2em;
+.feed_search{
+  ;
+    padding: 2px;
+    margin: 3px;
+    vertical-align:central;
+    justify-content:center;
+}
+
+.feed{
+    
 }
 
 .advertisment {
@@ -135,14 +180,20 @@ a:hover {
     padding: 0 0.5em;
 }
 
+.box-neonlight-color {
+    background: rgba(25,25,25, .85);
+    box-shadow: 0px 0px 10px 7px #6AA3db;
+}
+
 .sidebanner {
-    max-width: 200px;
+    z-index: 1;
+    max-width: 400px;
     min-width: 25px;
     width: 20%;
-    min-height: 200px;
-    background-color: hsl(246, 86%, 23%);
-    color: hsl(246, 20%, 90%);
-    padding: 0.2em 0.4em;
+    height: 0.4em;  
+    top: 8em;
+    max-height: 70%;
+    padding: 0.2em 0.5em;
     position: fixed;
 }
 
@@ -155,9 +206,36 @@ a:hover {
     height: 20em;
     float: right;
     padding: 0;
-    background-color: hsl(246, 86%, 23%);
+    border: none;
+    background-color: transparent;
     color: hsl(246, 20%, 90%);
 }
+
+
+
+.toggle_sidebanner:hover, .toggle_sidebanner:active, .toggle_sidebanner:focus, 
+.toggle_sidebanner:focus-visible, .toggle_sidebanner:focus-within {
+    background-color: transparent;
+    color: hsl(216, 20%, 90%);
+    border: none;
+    box-shadow: unset;
+    cursor: pointer;
+}
+
+.toggle_sidebanner:focus {
+    outline: none;
+}
+
+    .toggle_sidebanner:focus-visible {
+        outline: 2px solid #3498db;
+        outline-offset: 2px;
+    }
+
+    .toggle_sidebanner:active{
+        transform: scale(0.98);
+    }
+
+   
 
 .firstRegion {
     margin-top: 1.5em;
@@ -189,3 +267,76 @@ a:hover {
     line-height: 30px;
     height: 30px;
 }
+
+.w-10 {
+    max-width: 70%;
+    width : 10%;
+}
+
+.h-10 {
+    height: 10vh;
+}
+
+
+.container-md{
+    display:flex;
+    justify-content:center;
+}
+
+.LoginRegistration {
+    height: auto;
+    width: 100%;
+    margin: auto 0;
+}
+
+.login {
+    display: flex;
+    flex-direction: row;
+    width: 40%;
+    padding: 1em;
+    margin: 1em 0;
+    background-color: white;
+    justify-content: center;
+}
+
+.loginPage {
+    flex-direction: column;
+    width: 100%;
+    align-content: center;
+    justify-content: space-around;
+    padding-left: 1em;
+    padding-right 1em;
+}
+
+.loginfield{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: flex-start;
+    width: 100%;
+    height: 100%;
+
+}
+
+.textposition-center{
+    display:flex;
+    text-align:left;
+    justify-content:space-between;
+}
+
+.feed {
+    background-color: rgba(36,36,36, .85);
+    color: white;
+}
+
+.feed-box{
+    background-color:rgba(25,25,25, .85);
+    border: 1px solid #AFAFAFBB;
+    margin: 2em, auto;
+    padding: 0.5em;
+}
+
+
+
+
+
